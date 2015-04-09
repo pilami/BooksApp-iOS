@@ -39,6 +39,8 @@
 		747F008015951A58000F601E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 747F007415951A58000F601E /* Twitter.png */; };
 		747F008115951A58000F601E /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 747F007515951A58000F601E /* TwitterDown.png */; };
 		8257DF641ACF0488009B9CFA /* customtableview.m in Sources */ = {isa = PBXBuildFile; fileRef = 8257DF631ACF0488009B9CFA /* customtableview.m */; };
+		828589291AD68186006EF5BD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828589281AD68186006EF5BD /* DetailViewController.m */; };
+		8285892D1AD6858D006EF5BD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8285892C1AD6858D006EF5BD /* DetailViewController.xib */; };
 		C4BBB7B516FD2ABC003CA3F7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B316FD2ABC003CA3F7 /* CoreLocation.framework */; };
 		C4BBB7B616FD2ABC003CA3F7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B416FD2ABC003CA3F7 /* StoreKit.framework */; };
 		C4BBB7BA16FD2B0F003CA3F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B716FD2B0F003CA3F7 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -93,6 +95,9 @@
 		747F007515951A58000F601E /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
 		8257DF631ACF0488009B9CFA /* customtableview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customtableview.m; sourceTree = "<group>"; };
 		8257DF661ACF04C3009B9CFA /* customtableview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customtableview.h; sourceTree = "<group>"; };
+		828589271AD68186006EF5BD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		828589281AD68186006EF5BD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8285892C1AD6858D006EF5BD /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../DetailViewController.xib; sourceTree = "<group>"; };
 		C4BBB7B316FD2ABC003CA3F7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4BBB7B416FD2ABC003CA3F7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C4BBB7B716FD2B0F003CA3F7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -236,6 +241,9 @@
 				74366EE6158AC82C00A17D8A /* DefaultSettingsViewController.xib */,
 				8257DF631ACF0488009B9CFA /* customtableview.m */,
 				8257DF661ACF04C3009B9CFA /* customtableview.h */,
+				828589271AD68186006EF5BD /* DetailViewController.h */,
+				8285892C1AD6858D006EF5BD /* DetailViewController.xib */,
+				828589281AD68186006EF5BD /* DetailViewController.m */,
 			);
 			name = "Default Settings";
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				747F007815951A58000F601E /* Facebook.png in Resources */,
 				747F007915951A58000F601E /* FacebookDown.png in Resources */,
 				747F007A15951A58000F601E /* LoginFieldBG.png in Resources */,
+				8285892D1AD6858D006EF5BD /* DetailViewController.xib in Resources */,
 				747F007B15951A58000F601E /* Logo.png in Resources */,
 				747F007C15951A58000F601E /* MainBG.png in Resources */,
 				747F007D15951A58000F601E /* SignUp.png in Resources */,
@@ -334,6 +343,7 @@
 				74366EB7158AAE1000A17D8A /* AppDelegate.m in Sources */,
 				74366EE7158AC82C00A17D8A /* DefaultSettingsViewController.m in Sources */,
 				8257DF641ACF0488009B9CFA /* customtableview.m in Sources */,
+				828589291AD68186006EF5BD /* DetailViewController.m in Sources */,
 				74366F03158B973C00A17D8A /* MyLogInViewController.m in Sources */,
 				74366F06158B975500A17D8A /* MySignUpViewController.m in Sources */,
 			);

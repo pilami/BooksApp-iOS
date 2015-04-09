@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "DetailViewController.h"
 @interface CustomTableViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 @property NSMutableArray* dataitems;
 

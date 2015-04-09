@@ -61,8 +61,8 @@
 //     NSLog(@"%@ %@ %@", object.objectId, object[@"Title"], object[@"ShortDesc"]);
     NSDictionary *dict = self.dataitems[ indexPath.row];
     NSMutableString *str = dict[@"Title"];
-    [str appendString:@" : "];
-    [str appendString: dict[@"ShortDesc"]];
+//    [str appendString:@" : "];
+//    [str appendString: dict[@"ShortDesc"]];
     
     cell.textLabel.text = str;
     return cell;
@@ -74,14 +74,27 @@
     NSInteger row = indexPath.row;
     NSLog(  [NSMutableString stringWithFormat:@"Selected this %d cell", row]  );
     
-    MyLogInViewController *detailView = [[MyLogInViewController alloc] init];
+    DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    detailView.row = indexPath.row;
+
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellText = selectedCell.textLabel.text;
+    detailView.title = cellText;
     [self.view addSubview:detailView.view];
     [self.navigationController pushViewController:detailView animated:YES];
     
     
     
     
-}
+    
+    
+    
+    
+//    MyLogInViewController *detailView = [[MyLogInViewController alloc] init];
+//    [self.view addSubview:detailView.view];
+//    [self.navigationController pushViewController:detailView animated:YES];
+    
+    }
 
 
 
