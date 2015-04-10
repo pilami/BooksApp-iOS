@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DefaultSettingsViewController.h"
-
+#import "WelcomeScreenController.h"
 @implementation AppDelegate
 
 @synthesize navController;
@@ -34,7 +33,7 @@
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
-    self.navController = [[UINavigationController alloc] initWithRootViewController:[[DefaultSettingsViewController alloc] init]];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:[[WelcomeScreenController alloc] init]];
 //    [mynav.navigationBar.topItem setLeftBarButtonItem:     [[UIBarButtonItem alloc] initWithTitle: @"Back"
 //                                       style: UIBarButtonItemStylePlain
 //                                      target: self
@@ -43,8 +42,10 @@
     [self.window setRootViewController:self.navController];
 
     self.window.backgroundColor = [UIColor whiteColor];
-
+    
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

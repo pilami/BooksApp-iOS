@@ -71,6 +71,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    
     NSInteger row = indexPath.row;
     NSLog(  [NSMutableString stringWithFormat:@"Selected this %d cell", row]  );
     

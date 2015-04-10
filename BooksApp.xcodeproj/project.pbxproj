@@ -22,8 +22,8 @@
 		74366EC7158AAF7E00A17D8A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC1158AAF7E00A17D8A /* Security.framework */; };
 		74366EC8158AAF7E00A17D8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC2158AAF7E00A17D8A /* SystemConfiguration.framework */; };
 		74366ECA158AB00E00A17D8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74366EC9158AB00E00A17D8A /* QuartzCore.framework */; };
-		74366EE7158AC82C00A17D8A /* DefaultSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74366EE5158AC82C00A17D8A /* DefaultSettingsViewController.m */; };
-		74366EE8158AC82C00A17D8A /* DefaultSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74366EE6158AC82C00A17D8A /* DefaultSettingsViewController.xib */; };
+		74366EE7158AC82C00A17D8A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74366EE5158AC82C00A17D8A /* SearchViewController.m */; };
+		74366EE8158AC82C00A17D8A /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74366EE6158AC82C00A17D8A /* SearchViewController.xib */; };
 		74366F03158B973C00A17D8A /* MyLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74366F02158B973C00A17D8A /* MyLogInViewController.m */; };
 		74366F06158B975500A17D8A /* MySignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74366F05158B975500A17D8A /* MySignUpViewController.m */; };
 		747F007615951A58000F601E /* Exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 747F006A15951A58000F601E /* Exit.png */; };
@@ -38,6 +38,8 @@
 		747F007F15951A58000F601E /* SignUpFieldBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 747F007315951A58000F601E /* SignUpFieldBG.png */; };
 		747F008015951A58000F601E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 747F007415951A58000F601E /* Twitter.png */; };
 		747F008115951A58000F601E /* TwitterDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 747F007515951A58000F601E /* TwitterDown.png */; };
+		8237ED9F1AD79EE900982677 /* WelcomeScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8237ED9E1AD79EE900982677 /* WelcomeScreenController.m */; };
+		8237EDA11AD79F4000982677 /* WelcomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8237EDA01AD79F4000982677 /* WelcomeScreenController.xib */; };
 		8257DF641ACF0488009B9CFA /* customtableview.m in Sources */ = {isa = PBXBuildFile; fileRef = 8257DF631ACF0488009B9CFA /* customtableview.m */; };
 		828589291AD68186006EF5BD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828589281AD68186006EF5BD /* DetailViewController.m */; };
 		8285892D1AD6858D006EF5BD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8285892C1AD6858D006EF5BD /* DetailViewController.xib */; };
@@ -74,9 +76,9 @@
 		74366EC1158AAF7E00A17D8A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		74366EC2158AAF7E00A17D8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		74366EC9158AB00E00A17D8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		74366EE4158AC82C00A17D8A /* DefaultSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultSettingsViewController.h; sourceTree = "<group>"; };
-		74366EE5158AC82C00A17D8A /* DefaultSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSettingsViewController.m; sourceTree = "<group>"; };
-		74366EE6158AC82C00A17D8A /* DefaultSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultSettingsViewController.xib; sourceTree = "<group>"; };
+		74366EE4158AC82C00A17D8A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		74366EE5158AC82C00A17D8A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		74366EE6158AC82C00A17D8A /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		74366F01158B973C00A17D8A /* MyLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLogInViewController.h; sourceTree = "<group>"; };
 		74366F02158B973C00A17D8A /* MyLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLogInViewController.m; sourceTree = "<group>"; };
 		74366F04158B975500A17D8A /* MySignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySignUpViewController.h; sourceTree = "<group>"; };
@@ -93,6 +95,9 @@
 		747F007315951A58000F601E /* SignUpFieldBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpFieldBG.png; sourceTree = "<group>"; };
 		747F007415951A58000F601E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
 		747F007515951A58000F601E /* TwitterDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterDown.png; sourceTree = "<group>"; };
+		8237ED9D1AD79EE900982677 /* WelcomeScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScreenController.h; sourceTree = "<group>"; };
+		8237ED9E1AD79EE900982677 /* WelcomeScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScreenController.m; sourceTree = "<group>"; };
+		8237EDA01AD79F4000982677 /* WelcomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeScreenController.xib; sourceTree = "<group>"; };
 		8257DF631ACF0488009B9CFA /* customtableview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customtableview.m; sourceTree = "<group>"; };
 		8257DF661ACF04C3009B9CFA /* customtableview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = customtableview.h; sourceTree = "<group>"; };
 		828589271AD68186006EF5BD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -236,14 +241,17 @@
 		74366EEF158AF29000A17D8A /* Default Settings */ = {
 			isa = PBXGroup;
 			children = (
-				74366EE4158AC82C00A17D8A /* DefaultSettingsViewController.h */,
-				74366EE5158AC82C00A17D8A /* DefaultSettingsViewController.m */,
-				74366EE6158AC82C00A17D8A /* DefaultSettingsViewController.xib */,
+				74366EE4158AC82C00A17D8A /* SearchViewController.h */,
+				74366EE6158AC82C00A17D8A /* SearchViewController.xib */,
 				8257DF631ACF0488009B9CFA /* customtableview.m */,
 				8257DF661ACF04C3009B9CFA /* customtableview.h */,
 				828589271AD68186006EF5BD /* DetailViewController.h */,
 				8285892C1AD6858D006EF5BD /* DetailViewController.xib */,
 				828589281AD68186006EF5BD /* DetailViewController.m */,
+				8237ED9D1AD79EE900982677 /* WelcomeScreenController.h */,
+				8237EDA01AD79F4000982677 /* WelcomeScreenController.xib */,
+				74366EE5158AC82C00A17D8A /* SearchViewController.m */,
+				8237ED9E1AD79EE900982677 /* WelcomeScreenController.m */,
 			);
 			name = "Default Settings";
 			sourceTree = "<group>";
@@ -309,8 +317,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8237EDA11AD79F4000982677 /* WelcomeScreenController.xib in Resources */,
 				74366EB1158AAE1000A17D8A /* InfoPlist.strings in Resources */,
-				74366EE8158AC82C00A17D8A /* DefaultSettingsViewController.xib in Resources */,
+				74366EE8158AC82C00A17D8A /* SearchViewController.xib in Resources */,
 				747F007615951A58000F601E /* Exit.png in Resources */,
 				747F007715951A58000F601E /* ExitDown.png in Resources */,
 				747F007815951A58000F601E /* Facebook.png in Resources */,
@@ -341,9 +350,10 @@
 			files = (
 				74366EB3158AAE1000A17D8A /* main.m in Sources */,
 				74366EB7158AAE1000A17D8A /* AppDelegate.m in Sources */,
-				74366EE7158AC82C00A17D8A /* DefaultSettingsViewController.m in Sources */,
+				74366EE7158AC82C00A17D8A /* SearchViewController.m in Sources */,
 				8257DF641ACF0488009B9CFA /* customtableview.m in Sources */,
 				828589291AD68186006EF5BD /* DetailViewController.m in Sources */,
+				8237ED9F1AD79EE900982677 /* WelcomeScreenController.m in Sources */,
 				74366F03158B973C00A17D8A /* MyLogInViewController.m in Sources */,
 				74366F06158B975500A17D8A /* MySignUpViewController.m in Sources */,
 			);

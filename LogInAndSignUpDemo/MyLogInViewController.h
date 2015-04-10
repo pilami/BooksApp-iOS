@@ -8,4 +8,6 @@
 
 @interface MyLogInViewController : PFLogInViewController
 
+@property(nonatomic, strong) UILabel* logoLabel;
+
 @end
