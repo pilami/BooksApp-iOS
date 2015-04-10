@@ -10,13 +10,22 @@
 #import "MyLogInViewController.h"
 #import "MySignUpViewController.h"
 #import "SearchViewController.h"
+#import "HomeScreenController.h"
 @implementation WelcomeScreenController
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self setTitle:@"Register!"];
-    if (![PFUser currentUser]) { // No user logged in
+
+    if ([PFUser currentUser]) { // No user logged in
+        //Directly go to the HomeScreen
+        HomeScreenController * homeScreenController= [[HomeScreenController alloc] init];
+        [self.view addSubview:homeScreenController.view];
+        [self.navigationController pushViewController:homeScreenController animated:YES];
+            self.navigationController.navigationBarHidden = true;
+        
     }
+
     
 }
 
@@ -26,14 +35,12 @@
     NSLog(@"Yaay@!!!");
     [self setTitle:@"Register"];
     
-    if ([PFUser currentUser]) { // No user logged in
-        //Directly go to the search view
-     
-    }
 }
 
 -(IBAction)signupButtonPressed:(UIButton *)sender{
     NSLog(@"Signup button pressed!! " );
+    
+    
     
     MySignUpViewController *signupViewController = [[MySignUpViewController alloc] init];
     [signupViewController setDelegate:self];
@@ -41,7 +48,7 @@
     
     [self.view  addSubview:signupViewController.view];
     [self.navigationController pushViewController:signupViewController animated:YES];
-//    [self presentViewController:signupViewController animated:YES completion:NULL];
+    [self presentViewController:signupViewController animated:YES completion:NULL];
 
 }
 
@@ -80,11 +87,14 @@
     //    [self.navigationController popViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:NULL];
     
-    SearchViewController *searchViewController = [[SearchViewController alloc] init];
-    [self.view addSubview:searchViewController.view];
-    [self.navigationController pushViewController:searchViewController animated:NO];
-//    [self presentViewController:searchViewController animated:YES completion:NULL];
+//    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+//    [self.view addSubview:searchViewController.view];
+//    [self.navigationController pushViewController:searchViewController animated:NO];
 
+    
+    HomeScreenController *homeScreenController = [[HomeScreenController alloc] init];
+    [self.view addSubview:homeScreenController.view];
+    [self.navigationController pushViewController:homeScreenController animated:YES];
     
     
 }
@@ -127,6 +137,10 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     //    [self.navigationController popViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:NULL];
+    SearchViewController *searchViewController = [[SearchViewController alloc] init];
+    [self.view addSubview:searchViewController.view];
+    [self.navigationController pushViewController:searchViewController animated:NO];
+
 }
 
 // Sent to the delegate when the sign up attempt fails.

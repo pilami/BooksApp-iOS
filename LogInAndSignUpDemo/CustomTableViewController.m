@@ -14,9 +14,9 @@
 //  Copyright (c) 2013 Parse. All rights reserved.
 //
 
-#import "customtableview.h"
+#import "CustomTableViewController.h"
 #import "MyLogInViewController.h"
-
+#import "BookViewCell.h"
 
 @implementation CustomTableViewController{
 
@@ -27,7 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        [self setTitle:@"Results"];
+    [self setTitle:@"Results"];
+    
     NSLog(@"The table view loaded !! ");
     self.dataitems = [NSMutableArray arrayWithObjects:@"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
 
@@ -50,24 +51,57 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"table view at index");
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    static NSString *simpleTableIdentifier = @"BookViewCell";
+    
+    BookViewCell *cell = (BookViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"BookViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        
     }
+    
+    NSLog(@"table view at index");
+  
+ 
+    
+    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+
 //     NSLog(@"%@ %@ %@", object.objectId, object[@"Title"], object[@"ShortDesc"]);
     NSDictionary *dict = self.dataitems[ indexPath.row];
+    PFFile *imageFile = [dict objectForKey:@"thumbnail"];
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:data];
+            cell.titleImage.image = image;
+            
+            [tableView reloadData];
+        }
+    }];
+
+    
+    
+    
+    
     NSMutableString *str = dict[@"Title"];
 //    [str appendString:@" : "];
 //    [str appendString: dict[@"ShortDesc"]];
     
-    cell.textLabel.text = str;
+    cell.titleLabel.text = str;
+    cell.authorLabel.text = str;
+    cell.authorLabel.text = dict[@"Author"];
+    
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -80,8 +114,8 @@
     DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     detailView.row = indexPath.row;
 
-    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    NSString *cellText = selectedCell.textLabel.text;
+    BookViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellText = selectedCell.titleLabel.text;
     detailView.title = cellText;
     [self.view addSubview:detailView.view];
     [self.navigationController pushViewController:detailView animated:YES];

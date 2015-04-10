@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogInAndSignUpDemo/SearchViewController.h"
-            timestampString = "450350567.38314"
+            timestampString = "450357525.641696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "@interface DefaultSettingsViewController"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "@interface SearchViewController"
             landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
@@ -52,7 +52,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogInAndSignUpDemo/AppDelegate.m"
@@ -71,7 +71,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LogInAndSignUpDemo/customtableview.h"
+            filePath = "LogInAndSignUpDemo/CustomTableViewController.h"
             timestampString = "450025259.717043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -88,13 +88,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LogInAndSignUpDemo/WelcomeScreenController.m"
-            timestampString = "450353109.44885"
+            timestampString = "450367413.446298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-loginButtonPressed:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BookViewCell.h"
+            timestampString = "450363316.372107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "@interface BookViewCell"
+            landmarkType = "2">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BookViewCell titleImage]"
+                  moduleName = "BooksApp"
+                  urlString = "file:///Users/saichaitanyamanchikatla/GitHub/BooksApp-iOS/BookViewCell.h"
+                  timestampString = "450363342.758934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BookViewCell setTitleImage:]"
+                  moduleName = "BooksApp"
+                  urlString = "file:///Users/saichaitanyamanchikatla/GitHub/BooksApp-iOS/BookViewCell.h"
+                  timestampString = "450363342.809406"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

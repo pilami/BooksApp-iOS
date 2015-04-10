@@ -26,12 +26,13 @@
             // Do something with the found objects
             
             for (PFObject* ob in objects) {
-                PFFile *imageFile = [ob objectForKey:@"thumbnail"];
+                
                 NSDictionary *book = ob;
                 self.titleLabel.text=book[@"Title"];
                 NSLog([NSString stringWithFormat:@"Title is %@  %@ ", book[@"Title"], book]);
                 self.descLabel.text=book[@"ShortDesc"];
                 //            [self.picView setImageWithURL:[NSURL URLWithString:[teaserImage url]]];
+                PFFile *imageFile = [ob objectForKey:@"thumbnail"];
                 [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                     if (!error) {
                         UIImage *image = [UIImage imageWithData:data];

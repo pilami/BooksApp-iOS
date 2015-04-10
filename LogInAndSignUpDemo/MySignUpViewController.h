@@ -7,5 +7,5 @@
 //
 
 @interface MySignUpViewController : PFSignUpViewController
-
+@property(nonatomic, strong) UILabel* logoLabel;
 @end
