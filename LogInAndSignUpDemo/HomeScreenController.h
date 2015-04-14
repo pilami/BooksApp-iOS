@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface  HomeScreenController: UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *leftnavButton;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 
 @end

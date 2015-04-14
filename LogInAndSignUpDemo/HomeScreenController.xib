@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenController">
             <connections>
+                <outlet property="leftnavButton" destination="98t-5d-DUf" id="T2n-nI-BqJ"/>
+                <outlet property="searchButton" destination="siL-av-Tlf" id="Umc-lR-lZV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2Aj-nZ-Dxb"/>
             </connections>
         </placeholder>
@@ -14,7 +16,49 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siL-av-Tlf" userLabel="search">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Button" image="search-icon.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="255" y="75" width="30" height="27"/>
+                    </variation>
+                    <connections>
+                        <action selector="searchButtonPressed:" destination="-1" eventType="touchUpInside" id="SKQ-p7-gBR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98t-5d-DUf" userLabel="leftnav">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" title="Button" image="the-three-lines.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="38" y="69" width="34" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="leftNavPressed:" destination="-1" eventType="touchUpInside" id="4Su-ZM-qg0"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="siL-av-Tlf"/>
+                    <exclude reference="98t-5d-DUf"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="siL-av-Tlf"/>
+                    <include reference="98t-5d-DUf"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="search-icon.png" width="298" height="297"/>
+        <image name="the-three-lines.png" width="256" height="256"/>
+    </resources>
 </document>

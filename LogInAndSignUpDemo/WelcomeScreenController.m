@@ -18,11 +18,13 @@
     [self setTitle:@"Register!"];
 
     if ([PFUser currentUser]) { // No user logged in
+        
+
         //Directly go to the HomeScreen
         HomeScreenController * homeScreenController= [[HomeScreenController alloc] init];
         [self.view addSubview:homeScreenController.view];
         [self.navigationController pushViewController:homeScreenController animated:YES];
-            self.navigationController.navigationBarHidden = true;
+        self.navigationController.navigationBarHidden = false;
         
     }
 
@@ -61,7 +63,7 @@
         loginViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton;
 //        [self presentViewController:loginViewController animated:YES completion:NULL];
         [self.view addSubview:loginViewController.view];
-
+    [self.navigationItem setHidesBackButton:NO];
         [self.navigationController pushViewController:loginViewController animated:YES];
   //  }
     

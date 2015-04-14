@@ -29,7 +29,7 @@
     [super viewDidLoad];
     [self setTitle:@"Results"];
     
-    NSLog(@"The table view loaded !! ");
+//    NSLog(@"The table view loaded !! ");
     self.dataitems = [NSMutableArray arrayWithObjects:@"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
 
     }
@@ -45,7 +45,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Table cel cout");
+//    NSLog(@"Table cel cout");
     return [self.dataitems count];
 }
 
@@ -63,7 +63,7 @@
         
     }
     
-    NSLog(@"table view at index");
+//    NSLog(@"table view at index");
   
  
     
@@ -71,7 +71,7 @@
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
 
-//     NSLog(@"%@ %@ %@", object.objectId, object[@"Title"], object[@"ShortDesc"]);
+ //   NSLog(@"%@ %@ %@", object.objectId, object[@"Title"], object[@"Serial"]);
     NSDictionary *dict = self.dataitems[ indexPath.row];
     PFFile *imageFile = [dict objectForKey:@"thumbnail"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -94,6 +94,9 @@
     cell.titleLabel.text = str;
     cell.authorLabel.text = str;
     cell.authorLabel.text = dict[@"Author"];
+    cell.serial =  [[dict objectForKey:@"Serial"] intValue];
+    
+//   NSLog([NSString stringWithFormat:@"Set the cell to %@, with number %d", cell.titleLabel.text, cell.serial]);
     
     return cell;
 }
@@ -109,7 +112,7 @@
     
     
     NSInteger row = indexPath.row;
-    NSLog(  [NSMutableString stringWithFormat:@"Selected this %d cell", row]  );
+//    NSLog(  [NSMutableString stringWithFormat:@"Selected this %d cell", row]  );
     
     DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     detailView.row = indexPath.row;
@@ -117,6 +120,9 @@
     BookViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *cellText = selectedCell.titleLabel.text;
     detailView.title = cellText;
+    detailView.serial = selectedCell.serial;
+    
+//    detailView.serial =
     [self.view addSubview:detailView.view];
     [self.navigationController pushViewController:detailView animated:YES];
     

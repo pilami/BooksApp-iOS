@@ -8,7 +8,8 @@
 
 #import "SearchViewController.h"
 #import "CustomTableViewController.h"
-
+#import "WelcomeScreenController.h"
+#import "AppDelegate.h"
 @implementation SearchViewController
 
 
@@ -16,6 +17,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = false;
 //    if ([PFUser currentUser]) {
 //        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
 //    } else {
@@ -42,7 +44,24 @@
 - (IBAction)logOutButtonTapAction:(id)sender {
     [PFUser logOut];
     NSLog(@"Something is to be done here, user is logging off!");
-    [self dismissViewControllerAnimated:YES completion:NULL];
+//    [self dismissViewControllerAnimated:YES completion:NULL];
+    
+//    self.window.rootViewController = [[MyMainViewController alloc] initWithNibName:nil bundle:nil];
+    
+//    UIApplication *app = [UIApplication sharedApplication];
+//    AppDelegate *appd = (AppDelegate* ) app;
+//    UINavigationController *nav = (UINavigationController*) appd.window.rootViewController;
+//    
+//    UIViewController *rootController=(UIViewController *)[nav.viewControllers objectAtIndex:1];
+//    [self.view addSubview:rootController.view];
+// [self.navigationController pushViewController:rootController animated:YES];
+    
+
+    
+    
+    
+    
+    
 //    DefaultSettingsViewController *newFish = [[DefaultSettingsViewController alloc] init];
 //    [self.navigationController pushViewController:newFish animated:YES];
 //    [self presentViewController:newFish animated:YES completion:NULL];
@@ -119,7 +138,7 @@
             NSLog(@"Successfully retrieved %d books.", objects.count);
             // Do something with the found objects
             for (PFObject *object in objects) {
-                //                NSLog(@"%@ %@ %@", object.objectId, object[@"Title"], object[@"ShortDesc"]);
+//                               NSLog(@"%@ %d",  object[@"Title"], [[object objectForKey:@"Serial"] intValue] );
                 
                 
                 //                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:object[@"Title"]
@@ -141,7 +160,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"You entered %@",self.mysearchfield.text);
+//    NSLog(@"You entered %@",self.mysearchfield.text);
     
     [self searchForThis:self.mysearchfield.text];
 
