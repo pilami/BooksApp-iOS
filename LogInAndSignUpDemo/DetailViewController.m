@@ -101,18 +101,7 @@
                 
                 
                 
-                
-                
                 [ob saveInBackground];
-                
-                
-                
-
-                
-                
-                
-                
-                
                 
                 
 //                self.serial = book[@"Serial"];
@@ -171,40 +160,19 @@
     [query1 whereKey:@"username" equalTo:[[PFUser currentUser] username]     ];
     [query1 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            
-            
             for (PFObject* ob in objects) {
-                
-                //                NSLog([NSString stringWithFormat:@"Fav books are %@", [book objectForKey:@"FavBooks"] ] );
-                
                 NSMutableArray * favbooks = [ob objectForKey:@"FavBooks"];
                 NSLog(@"Initially");
-//                NSLog(@"array: %@", favbooks);
-                // add or remove
-              
                 if(self.isFav == true){
                     [favbooks addObject:[NSNumber numberWithInt:self.serial]];
-//                    [likes addObject:[NSString stringWithFormat:@"%@",[[PFUser currentUser] username]]];
-//                    if ([likes containsObject:[NSString stringWithFormat:@"%@", [[PFUser currentUser] username ]]] ) {
-//                        [likes addObject:[NSString stringWithFormat:@"%@",[[PFUser currentUser] username] ]];
-//                    }
-                    
-                    
                 }
                 else{
                     [favbooks removeObject:[NSNumber numberWithInt:self.serial]];
-//                    [likes removeObject:[NSString stringWithFormat:@"%@",[[PFUser currentUser] username]]];
-//                    NSLog(@"Now the fav books was");
-//                    NSLog(@"array: %@", favbooks);
                 }
-                
-//                ob[@"FavBooks"] = (NSArray*) favbooks;
-                [ob setObject:favbooks forKey:@"FavBooks"];                
-//                [ob setObject:likes forKey:@"likes"];
+                [ob setObject:favbooks forKey:@"FavBooks"];
                 [ob saveInBackground];
                 NSLog(@"Done!!");
             }
-            
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -215,8 +183,6 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
     //    NSInteger t = 3;
     [query whereKey:@"Serial" equalTo:[NSNumber numberWithInt:self.serial] ];
-    
-    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.

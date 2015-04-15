@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface  HomeScreenController: UIViewController
+#import "HSImageSidebarView.h"
+@interface  HomeScreenController: UIViewController<HSImageSidebarViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *leftnavButton;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
-
+@property NSMutableOrderedSet * popularBooks;
+@property NSMutableOrderedSet *popularImages;
+@property NSMutableOrderedSet *recommendedBooks;
+@property BOOL loadedImages;
 @end

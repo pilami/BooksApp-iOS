@@ -50,6 +50,7 @@
 		8237EDA11AD79F4000982677 /* WelcomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8237EDA01AD79F4000982677 /* WelcomeScreenController.xib */; };
 		824241181ADD4ACF003FF7F7 /* views.png in Resources */ = {isa = PBXBuildFile; fileRef = 824241171ADD4ACF003FF7F7 /* views.png */; };
 		8257DF641ACF0488009B9CFA /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8257DF631ACF0488009B9CFA /* CustomTableViewController.m */; };
+		82833BDE1ADE321E0032BA6C /* HSImageSidebarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82833BDC1ADE321E0032BA6C /* HSImageSidebarView.m */; };
 		828589291AD68186006EF5BD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828589281AD68186006EF5BD /* DetailViewController.m */; };
 		8285892D1AD6858D006EF5BD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8285892C1AD6858D006EF5BD /* DetailViewController.xib */; };
 		829AB77D1AD80AFB00E020CA /* HomeScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829AB77C1AD80AFB00E020CA /* HomeScreenController.m */; };
@@ -122,6 +123,9 @@
 		824241171ADD4ACF003FF7F7 /* views.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = views.png; sourceTree = "<group>"; };
 		8257DF631ACF0488009B9CFA /* CustomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewController.m; sourceTree = "<group>"; };
 		8257DF661ACF04C3009B9CFA /* CustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewController.h; sourceTree = "<group>"; };
+		82833BDB1ADE321E0032BA6C /* HSImageSidebarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSImageSidebarView.h; sourceTree = "<group>"; };
+		82833BDC1ADE321E0032BA6C /* HSImageSidebarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSImageSidebarView.m; sourceTree = "<group>"; };
+		82833BDD1ADE321E0032BA6C /* HSImageSidebarViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSImageSidebarViewDelegate.h; sourceTree = "<group>"; };
 		828589271AD68186006EF5BD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		828589281AD68186006EF5BD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8285892C1AD6858D006EF5BD /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../DetailViewController.xib; sourceTree = "<group>"; };
@@ -271,6 +275,9 @@
 		74366EEF158AF29000A17D8A /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				82833BDB1ADE321E0032BA6C /* HSImageSidebarView.h */,
+				82833BDC1ADE321E0032BA6C /* HSImageSidebarView.m */,
+				82833BDD1ADE321E0032BA6C /* HSImageSidebarViewDelegate.h */,
 				74366EE4158AC82C00A17D8A /* SearchViewController.h */,
 				74366EE6158AC82C00A17D8A /* SearchViewController.xib */,
 				74366EE5158AC82C00A17D8A /* SearchViewController.m */,
@@ -397,6 +404,7 @@
 			files = (
 				74366EB3158AAE1000A17D8A /* main.m in Sources */,
 				74366EB7158AAE1000A17D8A /* AppDelegate.m in Sources */,
+				82833BDE1ADE321E0032BA6C /* HSImageSidebarView.m in Sources */,
 				8225D1C51AD7F1C90022A4A0 /* BookViewCell.m in Sources */,
 				829AB77D1AD80AFB00E020CA /* HomeScreenController.m in Sources */,
 				74366EE7158AC82C00A17D8A /* SearchViewController.m in Sources */,
