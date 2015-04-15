@@ -77,6 +77,12 @@
 //    }
 //}
 
+-(IBAction)searchButtonPressed:(id)sender{
+    NSLog(@"search button pressed!");
+    [self searchForThis:self.mysearchfield.text];
+
+}
+
 - (IBAction)listAllButtonTapAction:(id)sender {
     NSLog(@"The user needs a list of all books!");
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];

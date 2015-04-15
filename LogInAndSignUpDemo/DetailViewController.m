@@ -192,7 +192,7 @@
             for (PFObject* ob in objects) {
                 
                 NSDictionary *book = ob;
-                NSMutableArray *likes = [ob objectForKey:@"Likes"];
+                NSMutableArray *likes = [ob objectForKey:@"likes"];
                 NSLog(@"array: %@",likes);
                 if(self.isFav == true){
 

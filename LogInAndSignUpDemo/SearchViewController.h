@@ -13,5 +13,6 @@
 
 - (IBAction)logOutButtonTapAction:(id)sender;
 - (IBAction)listAllButtonTapAction:(id)sender;
+-(IBAction)searchButtonPressed:(id)sender;
 -(void) searchForThis: (NSString*) text;
 @end

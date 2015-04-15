@@ -55,6 +55,7 @@
 		8285892D1AD6858D006EF5BD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8285892C1AD6858D006EF5BD /* DetailViewController.xib */; };
 		829AB77D1AD80AFB00E020CA /* HomeScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829AB77C1AD80AFB00E020CA /* HomeScreenController.m */; };
 		829AB77F1AD80B5300E020CA /* HomeScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829AB77E1AD80B5300E020CA /* HomeScreenController.xib */; };
+		829E03D51ADE902200AB0406 /* backups in Resources */ = {isa = PBXBuildFile; fileRef = 829E03D41ADE902200AB0406 /* backups */; };
 		C4BBB7B516FD2ABC003CA3F7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B316FD2ABC003CA3F7 /* CoreLocation.framework */; };
 		C4BBB7B616FD2ABC003CA3F7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B416FD2ABC003CA3F7 /* StoreKit.framework */; };
 		C4BBB7BA16FD2B0F003CA3F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BBB7B716FD2B0F003CA3F7 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -132,6 +133,7 @@
 		829AB77B1AD80AFB00E020CA /* HomeScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenController.h; sourceTree = "<group>"; };
 		829AB77C1AD80AFB00E020CA /* HomeScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenController.m; sourceTree = "<group>"; };
 		829AB77E1AD80B5300E020CA /* HomeScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenController.xib; sourceTree = "<group>"; };
+		829E03D41ADE902200AB0406 /* backups */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = backups; sourceTree = "<group>"; };
 		C4BBB7B316FD2ABC003CA3F7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C4BBB7B416FD2ABC003CA3F7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C4BBB7B716FD2B0F003CA3F7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -298,6 +300,7 @@
 				821ACA151ADCD6F500CD078D /* LeftNavViewController.h */,
 				821ACA161ADCD6F500CD078D /* LeftNavViewController.m */,
 				821ACA181ADCD73800CD078D /* LeftNavViewController.xib */,
+				829E03D41ADE902200AB0406 /* backups */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				747F007A15951A58000F601E /* LoginFieldBG.png in Resources */,
 				8285892D1AD6858D006EF5BD /* DetailViewController.xib in Resources */,
 				821ACA1C1ADCE43B00CD078D /* fav-after.png in Resources */,
+				829E03D51ADE902200AB0406 /* backups in Resources */,
 				747F007B15951A58000F601E /* Logo.png in Resources */,
 				747F007C15951A58000F601E /* MainBG.png in Resources */,
 				747F007D15951A58000F601E /* SignUp.png in Resources */,
