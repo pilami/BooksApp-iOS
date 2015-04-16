@@ -31,5 +31,17 @@
     [self.view addSubview:searchViewController.view];
     [self.navigationController pushViewController:searchViewController animated:YES];
 }
+-(IBAction)logoutButtonPressed:(id)sender{
+    NSLog(@"%@ wants to logout!",[[PFUser currentUser] username]);
+    [PFUser logOut];
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
+//    [self presentLoginViewController];
+
+    
+    
+    
+}
 
 @end

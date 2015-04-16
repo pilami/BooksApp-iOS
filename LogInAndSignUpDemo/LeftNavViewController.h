@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *profileButton;
 @property (weak, nonatomic) IBOutlet UIButton *favButton;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 
 @end

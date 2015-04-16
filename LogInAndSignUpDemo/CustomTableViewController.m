@@ -72,6 +72,7 @@
     
 
  //   NSLog(@"%@ %@ %@", object.objectId, object[@"Title"], object[@"Serial"]);
+    
     NSDictionary *dict = self.dataitems[ indexPath.row];
     PFFile *imageFile = [dict objectForKey:@"thumbnail"];
     [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {

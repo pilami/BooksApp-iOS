@@ -28,6 +28,8 @@
     self.popularView.userInteractionEnabled = YES;
     [self.popularView setPagingEnabled:YES];
     [self.popularView setScrollEnabled:YES];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     [self.view addSubview:self.popularView];
     
     UILabel *poplabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 225, 200, 20)];
@@ -130,7 +132,7 @@
         UIImage *im = imgv.image;
         UIImageView* imview = [[UIImageView alloc] initWithFrame: CGRectMake(lastx, lasty, imageWidth, imageHeight)];
         [imview setImage:im];
-        NSLog(@"Asking to add at %d %d %d %d", lastx, lasty, imageHeight, imageWidth);
+        NSLog(@"Asking to add at %d %d %d %d", lastx, 5, imageHeight, imageWidth);
         [imview setTag:imgv.tag];
         [imview setBackgroundColor:[UIColor purpleColor]];
         imview.userInteractionEnabled=YES;

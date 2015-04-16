@@ -115,6 +115,9 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
+    
+    
 }
 
 -(void) searchForThis: (NSString*) text{
@@ -125,41 +128,27 @@
     return;
     }
 
-    
+
     
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
     [query whereKey:@"Title" equalTo:self.mysearchfield.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
+
+        PFQuery *query2 = [PFQuery queryWithClassName:@"Book"];
+        [query2 whereKey:@"Author" equalTo:self.mysearchfield.text];
+        NSMutableArray *items = [query2 findObjects];
         CustomTableViewController *mycustomview = [[CustomTableViewController alloc] init];
         [self.view addSubview:mycustomview.view];
         [self.navigationController pushViewController:mycustomview animated:YES];
         [self setTitle:@"BooksApp!"];
-        mycustomview.dataitems = objects;
+        [items addObjectsFromArray: objects];
+        mycustomview.dataitems = items;
+        
         [self.mysearchfield resignFirstResponder];
-        
-        
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d books.", objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-//                               NSLog(@"%@ %d",  object[@"Title"], [[object objectForKey:@"Serial"] intValue] );
-                
-                
-                //                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:object[@"Title"]
-                //                                                                message:object[@"ShortDesc"]
-                //                                                               delegate:self
-                //                                                      cancelButtonTitle:@"OK"
-                //                                                      otherButtonTitles:nil];
-                //                [alert show];
-                //
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
+
+    
     }];
+
     
 
 }

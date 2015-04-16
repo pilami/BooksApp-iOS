@@ -63,7 +63,7 @@
         loginViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton;
 //        [self presentViewController:loginViewController animated:YES completion:NULL];
         [self.view addSubview:loginViewController.view];
-    [self.navigationItem setHidesBackButton:NO];
+        [self.navigationItem setHidesBackButton:NO];
         [self.navigationController pushViewController:loginViewController animated:YES];
   //  }
     
