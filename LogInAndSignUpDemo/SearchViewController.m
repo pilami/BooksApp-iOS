@@ -42,6 +42,7 @@
     
     
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+    [query fromLocalDatastore];
     [query whereKeyExists:@"Serial"];
     if(strings.count == 0)
     {
@@ -133,6 +134,7 @@
 - (IBAction)listAllButtonTapAction:(id)sender {
     NSLog(@"The user needs a list of all books!");
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+    [query fromLocalDatastore];
     [query whereKeyExists:@"Title"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
@@ -178,6 +180,7 @@
 
     
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+    [query fromLocalDatastore];
     [query whereKey:@"Title" equalTo:self.mysearchfield.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 

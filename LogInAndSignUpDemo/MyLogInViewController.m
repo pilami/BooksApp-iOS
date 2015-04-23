@@ -64,41 +64,18 @@
     [self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"TwitterDown.png"] forState:UIControlStateHighlighted];
     [self.logInView.twitterButton setTitle:@"" forState:UIControlStateNormal];
     [self.logInView.twitterButton setTitle:@"" forState:UIControlStateHighlighted];
-//    
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
-    
-    // Add login field background
-    
-    [self.logInView.usernameField setTextColor:[UIColor blackColor]];
-    [self.logInView.passwordField setTextColor:[UIColor blackColor]];
-    [self.logInView.usernameField setBorderStyle:UITextBorderStyleBezel];
-    [self.logInView.usernameField setBackgroundColor:[UIColor whiteColor]];
-    [self.logInView.passwordField setBackgroundColor:[UIColor whiteColor]];
-    [self.logInView.passwordField setBorderStyle:UITextBorderStyleBezel];
-    
-    
-    
-    
-//    [self.logInView.logInButton setBackgroundColor:[UIColor blueColor]];
-//    [self.logInView.logInButton sendSubviewToBack:[UIColor blueColor]];
-    
-    
-//    fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoginFieldBG.png"]];
-//    [self.logInView addSubview:self.fieldsBackground];
-  //  [self.logInView sendSubviewToBack:self.fieldsBackground];
 
-    // Remove text shadow
-//    CALayer *layer = self.logInView.usernameField.layer;
-//    layer.shadowOpacity = 0.0f;
-//    layer = self.logInView.passwordField.layer;
-//    layer.shadowOpacity = 0.0f;
+    // Add login field background
+//
+//    [self.logInView.usernameField setTextColor:[UIColor blackColor]];
+//    [self.logInView.passwordField setTextColor:[UIColor blackColor]];
+//    [self.logInView.usernameField setBorderStyle:UITextBorderStyleBezel];
+//    [self.logInView.usernameField setBackgroundColor:[UIColor whiteColor]];
+//    [self.logInView.passwordField setBackgroundColor:[UIColor whiteColor]];
+//    [self.logInView.passwordField setBorderStyle:UITextBorderStyleBezel];
+//    
     
-    // Set field text color
-//    [self.logInView.usernameField setTextColor:[UIColor colorWithRed:135.0f/255.0f green:118.0f/255.0f blue:92.0f/255.0f alpha:1.0]];
-//    [self.logInView.passwordField setTextColor:[UIColor colorWithRed:135.0f/255.0f green:118.0f/255.0f blue:92.0f/255.0f alpha:1.0]];
+    
     
 }
 
@@ -109,15 +86,12 @@
 
 
     self.logInView.logo.hidden = YES;
-//    [self.logInView.facebookButton setFrame:CGRectMake(35.0f, 287.0f, 120.0f, 40.0f)];
-//    [self.logInView.twitterButton setFrame:CGRectMake(35.0f+130.0f, 287.0f, 120.0f, 40.0f)];
-//    [self.logInView.signUpButton setFrame:CGRectMake(35.0f, 385.0f, 250.0f, 40.0f)];
 
-//    [self.fieldsBackground setFrame:CGRectMake(35.0f, 145.0f, 250.0f, 100.0f)];
     
     [self.logoLabel setFrame:CGRectMake(35.0f, 55.0f, 250.0f, 60.0f)];
-    [self.logInView.usernameField setFrame:CGRectMake(35.0f, 125.0f, 250.0f, 30.0f)];
-    [self.logInView.passwordField setFrame:CGRectMake(35.0f, 165.0f, 250.0f, 30.0f)];
+    
+//    [self.logInView.usernameField setFrame:CGRectMake(35.0f, 125.0f, 250.0f, 30.0f)];
+//    [self.logInView.passwordField setFrame:CGRectMake(35.0f, 165.0f, 250.0f, 30.0f)];
     [self.logInView.logInButton setFrame:CGRectMake(35.0f, 205.0f, 250.0f, 30.0f)];
 
 

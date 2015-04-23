@@ -76,15 +76,15 @@
 
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
     NSArray *objects = [query findObjects];
-//    [PFObject pinAllObjectsInBackground:objects];
+        [PFObject pinAllInBackground:objects];
     
         
         
     [query whereKeyExists:@"Serial"];
     query.limit = 10;
     [query orderByDescending:@"views"];
-    
-
+        [query fromLocalDatastore];
+        
 /*    //Stop
     NSArray* objects = [query findObjects];
     for (PFObject *object in objects) {
@@ -92,7 +92,7 @@
         [self.popularBooks addObject:object];
     }
 */
-        self.loadedImages = true;
+//        [query fromLocalDatastore];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -222,6 +222,11 @@
     //for each one, get the top 2 books in his genre
     
     PFQuery *query1 = [PFUser query];
+    NSArray *objects = [query1 findObjects];
+    [PFObject pinAllInBackground:objects];
+
+        [query1 fromLocalDatastore];
+        
     [query1 whereKey:@"username" equalTo:[[PFUser currentUser] username]     ];
     /*
     objects = [query1 findObjects];
@@ -264,6 +269,7 @@
                 for (NSNumber *bo in favbooks) {
 
                     PFQuery *query3 = [PFQuery queryWithClassName:@"Book"];
+                    [query3 fromLocalDatastore];
                     [query3 whereKey:@"Serial" equalTo:bo ];
                     [query3 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                     if (!error) {
@@ -274,6 +280,7 @@
                         for (PFObject *object in objects) {
 //                            NSLog(@"He likes: %@ " ,  object[@"Genre"]);
                             PFQuery *query2 = [PFQuery queryWithClassName:@"Book"];
+                            [query2 fromLocalDatastore];
                             [query2 whereKey:@"Genre" equalTo:object[@"Genre"] ];
                             
                             
@@ -285,7 +292,8 @@
                             }
                             else
 
-                            {[genres addObject:object[@"Genre"]];
+                            {
+                            [genres addObject:object[@"Genre"]];
                             
                             [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                                 if (!error) {
@@ -469,6 +477,7 @@
     UIButton* b = (UIButton*) sender;
     NSLog(@" pressed:  %@",b.titleLabel.text);
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+    [query fromLocalDatastore];
     [query whereKey:@"Genre" equalTo:b.titleLabel.text];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         

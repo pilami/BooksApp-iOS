@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <Parse/PFUser.h>
+#import <ParseUI/ParseUI.h>
+#import <ParseUI/PFLogInViewController.h>
+#import <ParseUI/PFSignUpViewController.h>
 
 @interface WelcomeScreenController: UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
