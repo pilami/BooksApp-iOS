@@ -41,16 +41,14 @@
 
 -(IBAction)signupButtonPressed:(UIButton *)sender{
     NSLog(@"Signup button pressed!! " );
-    
-    
-    
+
     MySignUpViewController *signupViewController = [[MySignUpViewController alloc] init];
     [signupViewController setDelegate:self];
     signupViewController.fields = PFSignUpFieldsUsernameAndPassword | PFSignUpFieldsEmail | PFSignUpFieldsSignUpButton;
     
     [self.view  addSubview:signupViewController.view];
     [self.navigationController pushViewController:signupViewController animated:YES];
-    [self presentViewController:signupViewController animated:YES completion:NULL];
+//    [self presentViewController:signupViewController animated:YES completion:NULL];
 
 }
 
@@ -139,9 +137,10 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     //    [self.navigationController popViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:NULL];
-    SearchViewController *searchViewController = [[SearchViewController alloc] init];
-    [self.view addSubview:searchViewController.view];
-    [self.navigationController pushViewController:searchViewController animated:NO];
+    
+    HomeScreenController *homeScreenController = [[HomeScreenController alloc] init];
+    [self.view addSubview:homeScreenController.view];
+    [self.navigationController pushViewController:homeScreenController animated:YES];
 
 }
 

@@ -10,10 +10,27 @@
 #import "SearchViewController.h"
 #import "DetailViewController.h"
 #import "LeftNavViewController.h"
+#import "CustomTableViewController.h"
 @implementation HomeScreenController
 
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    
+//    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+//        if (!error) {
+//            NSLog(@"User is currently at %f, %f", geoPoint.latitude, geoPoint.longitude);
+//            
+//            [[PFUser currentUser] setObject:geoPoint forKey:@"currentLocation"];
+//            [[PFUser currentUser] saveInBackground];
+//        }
+//        else{
+//            NSLog(@"Error fetching the location of the user: %@",[[PFUser currentUser] username]);
+//        }
+//    }];
+//    
+    
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self setTitle:@"Home"];
     [self.navigationItem setHidesBackButton:YES animated:YES];
@@ -52,12 +69,17 @@
 /*** POPULAR BEGIN!***/
     if(self.popularBooks.count == 0)
     {
-        NSLog(@"Asking to load again! WTFFFFF!!");
+//        NSLog(@"Asking to load again! WTFFFFF!!");
         self.popularImages = [[NSMutableOrderedSet alloc] init];
         self.popularBooks = [[NSMutableOrderedSet alloc] init];
-        NSLog(@"going in ");
+//        NSLog(@"going in ");
 
     PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+    NSArray *objects = [query findObjects];
+//    [PFObject pinAllObjectsInBackground:objects];
+    
+        
+        
     [query whereKeyExists:@"Serial"];
     query.limit = 10;
     [query orderByDescending:@"views"];
@@ -92,7 +114,7 @@
 
                 UIImageView* imview = [[UIImageView alloc] initWithFrame: CGRectMake(lastx, lasty, imageWidth, imageHeight)];
                 [imview setImage:im];
-                NSLog(@"Asking to add at %d %d %d %d", lastx, lasty, imageHeight, imageWidth);
+//                NSLog(@"Asking to add at %d %d %d %d", lastx, lasty, imageHeight, imageWidth);
                 [imview setTag: [object[@"Serial"] intValue] ];
                 [imview setBackgroundColor:[UIColor purpleColor]];
                 imview.userInteractionEnabled=YES;
@@ -132,7 +154,7 @@
         UIImage *im = imgv.image;
         UIImageView* imview = [[UIImageView alloc] initWithFrame: CGRectMake(lastx, lasty, imageWidth, imageHeight)];
         [imview setImage:im];
-        NSLog(@"Asking to add at %d %d %d %d", lastx, 5, imageHeight, imageWidth);
+//        NSLog(@"Asking to add at %d %d %d %d", lastx, 5, imageHeight, imageWidth);
         [imview setTag:imgv.tag];
         [imview setBackgroundColor:[UIColor purpleColor]];
         imview.userInteractionEnabled=YES;
@@ -259,7 +281,7 @@
                             [query2 orderByDescending:@"views"];
                             
                             if ([genres containsObject:object[@"Genre"]]) {
-                                NSLog(@"Already done!");
+//                                NSLog(@"Already done!");
                             }
                             else
 
@@ -280,10 +302,10 @@
                                         UIImageView *imgv = [[UIImageView alloc] initWithImage:im];
                                         imgv.tag = [object1[@"Serial"] intValue];
                                         [self.recommendedImages addObject:imgv];
-                                        NSLog(@"Got reco %d", [object1[@"Serial"] intValue]);
+//                                        NSLog(@"Got reco %d", [object1[@"Serial"] intValue]);
                                         UIImageView* imview = [[UIImageView alloc] initWithFrame: CGRectMake(lastx1, lasty1, imageWidth, imageHeight)];
                                         [imview setImage:im];
-                                        NSLog(@"Asking to add at %d %d %d %d", lastx1, lasty1, imageHeight, imageWidth);
+//                                        NSLog(@"Asking to add at %d %d %d %d", lastx1, lasty1, imageHeight, imageWidth);
                                         [imview setTag: [object1[@"Serial"] intValue] ];
                                         [imview setBackgroundColor:[UIColor purpleColor]];
                                         imview.userInteractionEnabled=YES;
@@ -323,7 +345,7 @@
                     
                     
                 }
-                NSLog(@"Size of got reco images: %d", self.recommendedImages.count);
+//                NSLog(@"Size of got reco images: %d", self.recommendedImages.count);
                 self.loadedImages = true;
                 rloadinglabel.hidden = YES;
                 [self.recommendedView setContentSize:CGSizeMake(contentwidth1, 100)];
@@ -348,7 +370,7 @@
             UIImage *im = imgv.image;
             UIImageView* imview = [[UIImageView alloc] initWithFrame: CGRectMake(lastx1, lasty1, imageWidth, imageHeight)];
             [imview setImage:im];
-            NSLog(@"Asking to add at %d %d %d %d", lastx1, lasty1, imageHeight, imageWidth);
+//            NSLog(@"Asking to add at %d %d %d %d", lastx1, lasty1, imageHeight, imageWidth);
             [imview setTag:imgv.tag];
             [imview setBackgroundColor:[UIColor purpleColor]];
             imview.userInteractionEnabled=YES;
@@ -379,14 +401,14 @@
 /*** RECOMMENDATIONS END!***/
     
     
-    NSLog(@"Popular books:");
-    for (NSNumber *i in self.popularBooks) {
-        NSLog(@"%d",  [i intValue] );
-    }
-    NSLog(@"Recommended books");
-    for (NSNumber *i in self.recommendedBooks) {
-        NSLog(@"%d", [i intValue]);
-    }
+//    NSLog(@"Popular books:");
+//    for (NSNumber *i in self.popularBooks) {
+//        NSLog(@"%d",  [i intValue] );
+//    }
+//    NSLog(@"Recommended books");
+//    for (NSNumber *i in self.recommendedBooks) {
+//        NSLog(@"%d", [i intValue]);
+//    }
     
 
     //    [popularView setBackgroundColor:[UIColor blueColor]];
@@ -396,33 +418,11 @@
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 
-    if(self.loadedImages)
-    {
-        
-      
-        
-        
-        
-    }
-
-//    self.navigationController.navigationItem.hidesBackButton = true;
-    NSLog(@"Home screen created!");
-    // Make a query and get books with maximum likes..
-//    NSDictionary* user =  [[PFUser currentUser] objectForKey:@"FavBooks"];
-//    NSLog([NSString stringWithFormat:@"User: %@", [[PFUser currentUser] username]]);
-//    NSLog([NSString stringWithFormat:@"Fav Books: %@", [user objectForKey:@"FavBooks"] ]);
-    
-        
-    //Popular
-    //Query all books and get books with max likes, put them in a scroll, lets say max 10 books
-    
-
-
     
 }
 
 -(IBAction)leftNavPressed  :(id)sender{
-    NSLog(@"Left nav button pressed!!");
+//    NSLog(@"Left nav button pressed!!");
     
     LeftNavViewController *leftnavController = [[LeftNavViewController alloc] init];
     [self.view addSubview:leftnavController.view];
@@ -431,8 +431,7 @@
 }
 -(IBAction)searchButtonPressed :(id)sender
 {
-    NSLog(@"Search Button pressed!!");
-    
+//    NSLog(@"Search Button pressed!!");    
     SearchViewController *searchViewController = [[SearchViewController alloc] init];
     [self.view addSubview:searchViewController.view];
     [self.navigationController pushViewController:searchViewController animated:YES];
@@ -452,9 +451,57 @@
     [self.view addSubview:detailView.view];
     [self.navigationController pushViewController:detailView animated:YES];
 
-    
-    
+}
+
+-(IBAction)fictionButtonPressed:(id)sender{
+    NSLog(@"Fiction needed");
+}
+-(IBAction)warButtonPressed:(id)sender{
+    NSLog(@"War needed");
+}
+-(IBAction)demoButtonPressed:(id)sender{
+    NSLog(@"demo needed");
+}
+-(IBAction)childrenButtonPressed:(id)sender{
+    NSLog(@"Children needed");
+}
+-(IBAction)categoryButtonPressed:(id)sender{
+    UIButton* b = (UIButton*) sender;
+    NSLog(@" pressed:  %@",b.titleLabel.text);
+    PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+    [query whereKey:@"Genre" equalTo:b.titleLabel.text];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        CustomTableViewController *mycustomview = [[CustomTableViewController alloc] init];
+        [self.view addSubview:mycustomview.view];
+        [self.navigationController pushViewController:mycustomview animated:YES];
+        [self setTitle:@"BooksApp!"];
+        NSMutableArray *items = [[NSMutableArray alloc] initWithArray:objects];
+        mycustomview.dataitems = items;
+        
+    }];
+
     
     
 }
+
+//-(void) searchForThis: (NSString*) text{
+//    PFQuery *query = [PFQuery queryWithClassName:@"Book"];
+//    [query whereKey:@"Genre" equalTo:self.mysearchfield.text];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        PFQuery *query2 = [PFQuery queryWithClassName:@"Book"];
+//        [query2 whereKey:@"Author" equalTo:self.mysearchfield.text];
+//        NSMutableArray *items = [query2 findObjects];
+//
+//        CustomTableViewController *mycustomview = [[CustomTableViewController alloc] init];
+//        [self.view addSubview:mycustomview.view];
+//        [self.navigationController pushViewController:mycustomview animated:YES];
+//        [self setTitle:@"BooksApp!"];
+//        [items addObjectsFromArray: objects];
+//        mycustomview.dataitems = items;
+//        
+//        [self.mysearchfield resignFirstResponder];
+//        
+//    }];
+//}
 @end

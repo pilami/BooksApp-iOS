@@ -7,9 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenController">
             <connections>
+                <outlet property="childrenButton" destination="I0L-ge-x7a" id="MbB-6S-HPi"/>
+                <outlet property="demoButton" destination="TmU-KX-OJ2" id="148-Gy-YYN"/>
+                <outlet property="fictionButton" destination="xoR-jJ-aUH" id="G0u-uV-lsS"/>
                 <outlet property="leftnavButton" destination="98t-5d-DUf" id="T2n-nI-BqJ"/>
                 <outlet property="searchButton" destination="siL-av-Tlf" id="Umc-lR-lZV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2Aj-nZ-Dxb"/>
+                <outlet property="warButton" destination="ass-Xo-Y2I" id="WHa-IP-36u"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -56,35 +60,44 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0L-ge-x7a">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="category">
+                            <state key="normal" title="Children">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="17" y="37" width="71" height="30"/>
                             </variation>
+                            <connections>
+                                <action selector="categoryButtonPressed:" destination="-1" eventType="touchUpInside" id="xhN-I2-UbE"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoR-jJ-aUH">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="category">
+                            <state key="normal" title="Fiction">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="107" y="37" width="71" height="30"/>
                             </variation>
+                            <connections>
+                                <action selector="categoryButtonPressed:" destination="-1" eventType="touchUpInside" id="kx6-z2-cRM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmU-KX-OJ2">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="category">
+                            <state key="normal" title="Demo">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="195" y="37" width="71" height="30"/>
                             </variation>
+                            <connections>
+                                <action selector="categoryButtonPressed:" destination="-1" eventType="touchUpInside" id="BiO-5K-qa0"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNb-OP-axl">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -133,13 +146,16 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ass-Xo-Y2I">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="category">
+                            <state key="normal" title="War">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                 <rect key="frame" x="18" y="75" width="71" height="30"/>
                             </variation>
+                            <connections>
+                                <action selector="categoryButtonPressed:" destination="-1" eventType="touchUpInside" id="WCh-OB-YtT"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-Ed-z8X">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
